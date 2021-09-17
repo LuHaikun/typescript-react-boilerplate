@@ -1,5 +1,5 @@
 {
-  "name": "typescript-boilerplate",
+  "name": "typescript-react-boilerplate",
   "version": "1.0.0",
   "description": "typescript脚手架",
   "main": "index.js",
@@ -9,7 +9,6 @@
     "build:development": "cross-env NODE_ENV=development webpack --config config/webpack.prod.js",
     "build:intranet": "cross-env NODE_ENV=intranet webpack --config config/webpack.prod.js",
     "build:production": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
-    "standardfix": "standard --fix",
     "format": "prettier --write src/**/*.ts{,x}",
     "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
     "lintfix": "eslint src/**/*.ts{,x} --fix"
@@ -34,10 +33,10 @@
     "events": "^3.1.0",
     "history": "^4.10.1",
     "moment": "^2.24.0",
-    "react": "^16.8.4",
-    "react-dom": "^16.8.4",
-    "react-router": "4.3.1",
-    "react-router-dom": "4.3.1"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router": "^5.2.1",
+    "react-router-dom": "^5.3.0"
   },
   "devDependencies": {
     "@babel/core": "7.10.4",
@@ -50,10 +49,10 @@
     "@svgr/webpack": "^5.5.0",
     "@types/events": "^3.0.0",
     "@types/history": "^4.7.6",
-    "@types/react": "^16.9.41",
-    "@types/react-dom": "^16.9.8",
-    "@types/react-router": "^5.1.8",
-    "@types/react-router-dom": "^5.1.5",
+    "@types/react": "^17.0.21",
+    "@types/react-dom": "^17.0.9",
+    "@types/react-router": "^5.1.16",
+    "@types/react-router-dom": "^5.1.9",
     "@typescript-eslint/eslint-plugin": "^4.31.1",
     "@typescript-eslint/parser": "^4.31.1",
     "autoprefixer": "^10.3.4",
