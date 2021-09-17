@@ -1,0 +1,122 @@
+{
+  "name": "typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "typescript脚手架",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development webpack serve --config config/webpack.dev.js",
+    "build:test": "cross-env NODE_ENV=test webpack --config config/webpack.prod.js",
+    "build:development": "cross-env NODE_ENV=development webpack --config config/webpack.prod.js",
+    "build:intranet": "cross-env NODE_ENV=intranet webpack --config config/webpack.prod.js",
+    "build:production": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
+    "standardfix": "standard --fix",
+    "format": "prettier --write src/**/*.ts{,x}",
+    "lint": "tsc --noEmit && eslint src/**/*.ts{,x}",
+    "lintfix": "eslint src/**/*.ts{,x} --fix"
+  },
+  "standard": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
+    ]
+  },
+  "keywords": [],
+  "author": "luhk",
+  "license": "ISC",
+  "dependencies": {
+    "@ant-design/icons": "^4.2.1",
+    "@loadable/component": "^5.10.3",
+    "antd": "^4.4.2",
+    "axios": "^0.18.0",
+    "classnames": "^2.2.6",
+    "css-vars": "^2.2.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "events": "^3.1.0",
+    "history": "^4.10.1",
+    "moment": "^2.24.0",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4",
+    "react-router": "4.3.1",
+    "react-router-dom": "4.3.1"
+  },
+  "devDependencies": {
+    "@babel/core": "7.10.4",
+    "@babel/preset-env": "7.10.4",
+    "@babel/preset-react": "7.10.4",
+    "@babel/preset-typescript": "^7.10.4",
+    "@commitlint/cli": "^8.2.0",
+    "@commitlint/config-angular": "^8.2.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.4.3",
+    "@svgr/webpack": "^5.5.0",
+    "@types/events": "^3.0.0",
+    "@types/history": "^4.7.6",
+    "@types/react": "^16.9.41",
+    "@types/react-dom": "^16.9.8",
+    "@types/react-router": "^5.1.8",
+    "@types/react-router-dom": "^5.1.5",
+    "@typescript-eslint/eslint-plugin": "^4.31.1",
+    "@typescript-eslint/parser": "^4.31.1",
+    "autoprefixer": "^10.3.4",
+    "babel-eslint": "^10.1.0",
+    "babel-loader": "8.1.0",
+    "babel-plugin-import": "1.13.0",
+    "chalk": "^4.1.0",
+    "commitlint": "9.0.1",
+    "core-js": "^3.6.5",
+    "cross-env": "^7.0.2",
+    "css-loader": "3.6.0",
+    "css-minimizer-webpack-plugin": "^3.0.2",
+    "cssnano": "^5.0.8",
+    "detect-port": "^1.3.0",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-typescript": "^14.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.25.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "file-loader": "6.0.0",
+    "glob": "^7.1.7",
+    "html-webpack-plugin": "^5.3.2",
+    "husky": "4.2.5",
+    "less": "3.11.3",
+    "less-loader": "6.1.3",
+    "mini-css-extract-plugin": "^2.2.2",
+    "node-sass": "4.14.1",
+    "postcss": "^8.3.6",
+    "postcss-loader": "^6.1.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "purgecss-webpack-plugin": "^4.0.3",
+    "sass-loader": "8.0.2",
+    "source-map-loader": "^1.0.0",
+    "speed-measure-webpack-plugin": "^1.5.0",
+    "style-loader": "1.2.1",
+    "ts-loader": "^8.0.0",
+    "typescript": "^3.6.3",
+    "url-loader": "^4.1.0",
+    "validate-commit-msg": "2.14.0",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2",
+    "webpack-merge": "^5.8.0",
+    "workbox-webpack-plugin": "^6.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "browserslist": {
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ],
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ]
+  }
+}

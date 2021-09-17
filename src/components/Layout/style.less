@@ -1,0 +1,42 @@
+.layout-wrapper {
+  height: 100%;
+  display: flex;
+  .layout-sider {
+    .layout-logo {
+      height: 32px;
+      background: rgba(255, 255, 255, 0.2);
+      margin: 16px;
+    }
+  }
+  
+  
+  .layout-compose {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: #F0F2F5;
+    .layout-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #FFF;
+    }
+    .layout-content {
+      flex: 1;
+      background: #FFF;
+      margin: 16px;
+      padding: 16px;
+      min-height: 300px;
+    }
+    .layout-trigger {
+      font-size: 18px;
+      line-height: 64px;
+      padding: 0 24px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+    .layout-trigger :hover {
+      color: #1890ff;
+    }
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "version": "1.0.0",
+  "compilerOptions": {
+    /* 基础配置 */
+    "target": "es5",                          /* 用于指定编译之后的版本目标version: 'ES3' (default), 'ES5', 'ES2015', 'ES2016', 'ES2017','ES2018' or 'ESNEXT' */
+    "module": "es2015",                       /* 用来指定要使用的模块标准: 'none', 'commonjs', 'amd', 'system', 'umd', 'es2015', or 'ESNext' */
+    "lib": [
+      "dom",
+      "es6",
+      "es2015.promise",
+      "es2017.object",
+      "es2016.array.include"
+    ],                                        /* 用于指定要包含在编译中的库文件，这个我们在前面的课程中讲过一点，如果你要使用一些ES6的新语法，你需要引入ES6这个库，或者也可以写ES2015 */
+    "allowJs": true,                          /* 用来指定是否允许编译JS文件，默认是false，即不编译JS文件 */
+    "sourceMap": true,                        /* 用来指定编译时是否生成.map文件 */
+    "jsx": "react",                           /* 指定jsx代码用于的开发环境: 'preserve', 'react-native', or 'react' */
+    "importHelpers": true,                    /* 指定是否引入tslib里的辅助工具函数，默认为false */
+    "isolatedModules": false,                  /* 指定是否将每个文件作为单独的模块，默认为true，他不可以和declaration同时设定 */
+    "preserveConstEnums": true,               /* 保留const和enum声明 */
+    "removeComments": true,                   /* 用于指定是否将编译后的文件中的注释删掉，设为true的话即删掉注释，默认为false */
+    "paths": {
+      "$view/*": ["src/view/*"],
+      "$assets/*": ["src/assets/*"],
+      "$constant/*": ["src/constant/*"],
+      "$config/*": ["src/config/*"],
+      "$lib/*": ["src/lib/*"],
+      "$api/*": ["src/api/*"],
+      "*": ["types/*"]
+    },
+    /* 类型检查 */
+    "noImplicitThis": false,                  /* 当this表达式的值为any类型的时候，生成一个错误 */
+    "noImplicitAny": true,                    /* 如果我们没有为一些值设置明确的类型，编译器会默认认为这个值为any类型，如果将noImplicitAny设为true，则如果没有设置明确的类型会报错，默认值为false */
+    "strictNullChecks": false,                /* 这个配置项我们在前面课程讲过了，当设为true时，null和undefined值不能赋值给非这两种类型的值，别的类型的值也不能赋给他们， 除了any类型，还有个例外就是undefined可以赋值给void类型 */
+
+    /* 额外检查 */
+    "noUnusedLocals": false,                  /* 用于检查是否有定义了但是没有使用的变量，对于这一点的检测，使用ESLint可以在你书写代码的时候做提示，你可以配合使用。他的默认值为false */
+    "noUnusedParameters": false,              /* 用于检查是否有在函数体中没有使用的参数，这个也可以配合ESLint来做检查，他默认是false */
+    "noImplicitReturns": true,                /* 用于检查函数是否有返回值，设为true后，如果函数没有返回值则会提示，默认为false */
+
+    /* 模块解析 */
+    "moduleResolution": "node",               /* 用于选择模块解析策略，有"node"和"classic"两种类型，我们在讲模块解析的时候已经讲过了 */
+    "typeRoots": [
+      "node_modules/@types",
+      "./typings"
+    ],                                        /* 用来指定声明文件或文件夹的路径列表，如果指定了此项，则只有在这里列出的声明文件才会被加载 */
+    "allowSyntheticDefaultImports": true,     /* 用来指定允许从没有默认导出的模块中默认导入 */
+    "esModuleInterop": true,                  /* 通过为导入内容创建命名空间，实现CommonJS和ES模块之间的互操作性 */
+    "baseUrl": "./",                          /* 用于设置解析非相对模块名称的基本目录，相对模块不会受baseUrl的影响。 */
+
+    "noEmitHelpers": true,                    /* 命令行选项 */
+    "skipLibCheck": true,                     /* 跳过lib库检测 */
+  
+    /* 实验性配置 */
+    "resolveJsonModule": true,
+    "experimentalDecorators": true           /* 用于指定是否启用实验性的装饰器特性 */
+  },
+  "include": [
+    "src",
+    "./typings"
+  ],                                          /* 指定编译需要编译的文件或目录，但是和files的区别在于，这里的路径可以是文件夹，也可以是文件，可以使用相对和绝对路径，而且可以使用通配符，比如"./src"即表示要编译src文件夹下的所有文件以及子文件夹的文件 */
+  "exclude": [
+    "dist",
+    "scripts",
+    "node_modules"
+  ]                                           /* 指定编译器需要排除的文件或文件夹，可以指定一个列表，规则和include一样，可以是文件可以是文件夹，可以是相对路径或绝对路径，可以使用通配符 */
+}
